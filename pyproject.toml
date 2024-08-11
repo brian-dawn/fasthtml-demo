@@ -4,6 +4,7 @@ authors = [
 ]
 dependencies = [
   "python-fasthtml>=0.3.2",
+  "python-dotenv>=1.0.1",
 ]
 description = "Add your description here"
 name = "mess-with-fasthtml"
@@ -17,9 +18,10 @@ requires = ["hatchling"]
 
 [tool.rye]
 dev-dependencies = [
-  "ruff>=0.5.7",
-  "aws-cdk-lib>=2.151.0",
-  "constructs>=10.0.0",
+    "ruff>=0.5.7",
+    "aws-cdk-lib>=2.151.0",
+    "constructs>=10.0.0",
+    "aws-cdk-aws-lambda-python-alpha>=2.151.0a0",
 ]
 managed = true
 

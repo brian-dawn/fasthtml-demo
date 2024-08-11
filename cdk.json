@@ -1,5 +1,5 @@
 {
-  "app": "python3 app.py",
+  "app": "python3 src/mess_with_fasthtml/infra/infra_stack.py",
   "watch": {
     "include": [
       "**"

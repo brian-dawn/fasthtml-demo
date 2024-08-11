@@ -23,7 +23,9 @@ aws-cdk-asset-kubectl-v20==2.1.2
     # via aws-cdk-lib
 aws-cdk-asset-node-proxy-agent-v6==2.0.3
     # via aws-cdk-lib
+aws-cdk-aws-lambda-python-alpha==2.151.0a0
 aws-cdk-lib==2.151.0
+    # via aws-cdk-aws-lambda-python-alpha
 beautifulsoup4==4.12.3
     # via python-fasthtml
 cattrs==23.2.3
@@ -34,6 +36,7 @@ certifi==2024.7.4
 click==8.1.7
     # via uvicorn
 constructs==10.3.0
+    # via aws-cdk-aws-lambda-python-alpha
     # via aws-cdk-lib
 fastcore==1.6.6
     # via fastlite
@@ -61,6 +64,7 @@ jsii==1.102.0
     # via aws-cdk-asset-awscli-v1
     # via aws-cdk-asset-kubectl-v20
     # via aws-cdk-asset-node-proxy-agent-v6
+    # via aws-cdk-aws-lambda-python-alpha
     # via aws-cdk-lib
     # via constructs
 oauthlib==3.2.2
@@ -71,6 +75,7 @@ publication==0.0.3
     # via aws-cdk-asset-awscli-v1
     # via aws-cdk-asset-kubectl-v20
     # via aws-cdk-asset-node-proxy-agent-v6
+    # via aws-cdk-aws-lambda-python-alpha
     # via aws-cdk-lib
     # via constructs
     # via jsii
@@ -78,6 +83,7 @@ python-dateutil==2.9.0.post0
     # via jsii
     # via python-fasthtml
 python-dotenv==1.0.1
+    # via mess-with-fasthtml
     # via uvicorn
 python-fasthtml==0.3.2
     # via mess-with-fasthtml
@@ -101,6 +107,7 @@ typeguard==2.13.3
     # via aws-cdk-asset-awscli-v1
     # via aws-cdk-asset-kubectl-v20
     # via aws-cdk-asset-node-proxy-agent-v6
+    # via aws-cdk-aws-lambda-python-alpha
     # via aws-cdk-lib
     # via constructs
     # via jsii

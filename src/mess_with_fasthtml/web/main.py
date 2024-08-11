@@ -13,7 +13,7 @@ hdrs = (
 # Turn off live in production.
 not_live = os.environ.get("NO_LIVE", False)
 
-app, rt = fast_app(live=not not_live, hdrs=hdrs)
+app, rt = fast_app(live=not not_live, hdrs=hdrs, key_fname="/tmp/sesskey")
 
 
 count = 0
