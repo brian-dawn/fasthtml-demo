@@ -14,13 +14,27 @@ anyio==4.4.0
     # via httpx
     # via starlette
     # via watchfiles
+attrs==23.2.0
+    # via cattrs
+    # via jsii
+aws-cdk-asset-awscli-v1==2.2.202
+    # via aws-cdk-lib
+aws-cdk-asset-kubectl-v20==2.1.2
+    # via aws-cdk-lib
+aws-cdk-asset-node-proxy-agent-v6==2.0.3
+    # via aws-cdk-lib
+aws-cdk-lib==2.151.0
 beautifulsoup4==4.12.3
     # via python-fasthtml
+cattrs==23.2.3
+    # via jsii
 certifi==2024.7.4
     # via httpcore
     # via httpx
 click==8.1.7
     # via uvicorn
+constructs==10.3.0
+    # via aws-cdk-lib
 fastcore==1.6.6
     # via fastlite
     # via python-fasthtml
@@ -39,13 +53,29 @@ httpx==0.27.0
 idna==3.7
     # via anyio
     # via httpx
+importlib-resources==6.4.0
+    # via jsii
 itsdangerous==2.2.0
     # via python-fasthtml
+jsii==1.102.0
+    # via aws-cdk-asset-awscli-v1
+    # via aws-cdk-asset-kubectl-v20
+    # via aws-cdk-asset-node-proxy-agent-v6
+    # via aws-cdk-lib
+    # via constructs
 oauthlib==3.2.2
     # via python-fasthtml
 packaging==24.1
     # via fastcore
+publication==0.0.3
+    # via aws-cdk-asset-awscli-v1
+    # via aws-cdk-asset-kubectl-v20
+    # via aws-cdk-asset-node-proxy-agent-v6
+    # via aws-cdk-lib
+    # via constructs
+    # via jsii
 python-dateutil==2.9.0.post0
+    # via jsii
     # via python-fasthtml
 python-dotenv==1.0.1
     # via uvicorn
@@ -56,7 +86,6 @@ python-multipart==0.0.9
 pyyaml==6.0.2
     # via uvicorn
 ruff==0.5.7
-    # via mess-with-fasthtml
 six==1.16.0
     # via python-dateutil
 sniffio==1.3.1
@@ -68,6 +97,15 @@ sqlite-minutils==3.36.0.post4
     # via fastlite
 starlette==0.38.2
     # via python-fasthtml
+typeguard==2.13.3
+    # via aws-cdk-asset-awscli-v1
+    # via aws-cdk-asset-kubectl-v20
+    # via aws-cdk-asset-node-proxy-agent-v6
+    # via aws-cdk-lib
+    # via constructs
+    # via jsii
+typing-extensions==4.12.2
+    # via jsii
 uvicorn==0.30.5
     # via python-fasthtml
 uvloop==0.19.0

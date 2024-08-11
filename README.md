@@ -1,3 +1,9 @@
 # mess-with-fasthtml
 
-Describe your project here.
+## Usage
+
+```bash
+rye run dev
+rye run cdk
+rye run lint
+```
