@@ -67,6 +67,8 @@ jsii==1.102.0
     # via aws-cdk-aws-lambda-python-alpha
     # via aws-cdk-lib
     # via constructs
+mangum==0.17.0
+    # via mess-with-fasthtml
 oauthlib==3.2.2
     # via python-fasthtml
 packaging==24.1
@@ -113,6 +115,7 @@ typeguard==2.13.3
     # via jsii
 typing-extensions==4.12.2
     # via jsii
+    # via mangum
 uvicorn==0.30.5
     # via python-fasthtml
 uvloop==0.19.0

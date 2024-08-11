@@ -35,7 +35,7 @@ class InfraStack(Stack):
 
         # Create or reference the hosted zone for the domain
         hosted_zone = route53.HostedZone.from_lookup(
-            self, "HostedZone", domain_name="demo.dawn.lol"
+            self, "HostedZone", domain_name="dawn.lol"
         )
 
         # Create a TLS certificate for the domain using ACM

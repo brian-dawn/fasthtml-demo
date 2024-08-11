@@ -6,8 +6,11 @@ from fasthtml.common import *
 hdrs = (
     MarkdownJS(),
     HighlightJS(langs=["python", "javascript", "html", "css"]),
-    Link(rel="stylesheet", href="assets/normalize.min.css", type="text/css"),
-    Link(rel="stylesheet", href="assets/sakura.css", type="text/css"),
+    Link(
+        rel="stylesheet",
+        href="https://cdn.jsdelivr.net/npm/sakura.css/css/sakura.css",
+        type="text/css",
+    ),
 )
 
 # Turn off live in production.
@@ -45,6 +48,7 @@ def markdown_component():
 @rt("/")
 def get():
     return Div(
+        "hello world",
         counter_component(),
         markdown_component(),
     )
