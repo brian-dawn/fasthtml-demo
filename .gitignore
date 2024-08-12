@@ -12,3 +12,5 @@ wheels/
 .sesskey
 cdk.out
 .env
+
+.vscode

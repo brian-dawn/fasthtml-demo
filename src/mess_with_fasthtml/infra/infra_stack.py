@@ -12,6 +12,8 @@ from aws_cdk import (
     # aws_sqs as sqs,
 )
 from aws_cdk import aws_apigateway as apigateway
+from aws_cdk.aws_lambda import Runtime
+from aws_cdk.aws_lambda_python_alpha import PythonFunction, PythonLayerVersion
 
 
 from aws_cdk.aws_lambda import DockerImageFunction, DockerImageCode
@@ -24,12 +26,22 @@ class InfraStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        # Use the Dockerfile in the project root to build the Lambda.
+        os.system("cat requirements.lock | grep -v '\\-e' > .layer/requirements.txt")
 
-        lambda_function = DockerImageFunction(
+        layer = PythonLayerVersion(
             self,
-            "FastHtmlFunction",
-            code=DockerImageCode.from_image_asset(directory="."),
+            "FastHtmlLayer",
+            entry=".layer/",
+            compatible_runtimes=[Runtime.PYTHON_3_12],
+        )
+
+        lambda_function = PythonFunction(
+            self,
+            "FastHtmlFunction2",
+            entry="src/mess_with_fasthtml/web",
+            index="main.py",
+            layers=[layer],
+            runtime=Runtime.PYTHON_3_12,
             environment={"NO_LIVE": "true"},
         )
 

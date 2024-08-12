@@ -1,6 +1,7 @@
 import os
 
 from fasthtml.common import *
+from mangum import Mangum
 
 
 hdrs = (
@@ -61,4 +62,7 @@ def increment():
     return count
 
 
-serve()
+handler = Mangum(app, lifespan="off")
+
+if __name__ == "__main__":
+    serve()
