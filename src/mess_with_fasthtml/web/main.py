@@ -32,6 +32,7 @@ def counter_component():
             hx_swap="innerHTML",
             id="count",
         ),
+        render_all_the_rows(),
     )
 
 
@@ -40,19 +41,18 @@ def markdown_component():
         """
 # Hello World
 * This is a list
-* This is a list
 """,
         cls="marked",
     )
 
 
+def render_all_the_rows():
+    return Div(*[Div(f"Row {i}") for i in range(count)])
+
+
 @rt("/")
 def get():
-    return Div(
-        "hello world",
-        counter_component(),
-        markdown_component(),
-    )
+    return Div("Click the button!", counter_component(), render_all_the_rows())
 
 
 @app.post("/increment")
@@ -62,7 +62,9 @@ def increment():
     return count
 
 
+# This is used so we can run the app in AWS.
 handler = Mangum(app, lifespan="off")
 
+# Otherwise we are running locally.
 if __name__ == "__main__":
     serve()
